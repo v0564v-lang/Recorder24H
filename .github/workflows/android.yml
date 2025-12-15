@@ -20,8 +20,9 @@ jobs:
     - name: Build APK with Gradle
       run: gradle assembleDebug --no-daemon
 
+    # 📌 오류 발생 지점 수정 완료 (v3 -> v4)
     - name: Upload APK
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4 
       with:
         name: MyRecorderApp
         path: app/build/outputs/apk/debug/app-debug.apk
